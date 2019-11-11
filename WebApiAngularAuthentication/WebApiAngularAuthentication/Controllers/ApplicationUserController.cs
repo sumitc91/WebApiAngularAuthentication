@@ -36,7 +36,7 @@ namespace WebApiAngularAuthentication.Controllers
 
             try
             {
-                var result = _userManager.CreateAsync(applicationUser, model.Password);
+                var result = await _userManager.CreateAsync(applicationUser, model.Password);
                 return Ok(result);
             }
             catch (Exception ex)
